@@ -1,11 +1,14 @@
 {
 	"folders": [
-		{
-			"path": "."
-		},
-		{
-			"path": "../source-shopping-card"
-		}
-	],
+    {
+      "path": "."
+    },
+    {
+      "path": "../source-shopping-card"
+    },
+    {
+      "path": "../../express-webdebsimplified"
+    }
+  ],
   "settings": {}
 }
