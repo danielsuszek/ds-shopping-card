@@ -1,0 +1,23 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+}
+
+body {
+  width: 100vw;
+  font-family: $Poppins;
+  background-color: $black;
+  color: $light;
+
+}
+
+a {
+  text-decoration: none; 
+  @include border(#f00)
+}
+
+#root {
+  height: 100vh;
+}
+
+

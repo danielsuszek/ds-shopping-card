@@ -8,6 +8,9 @@
     },
     {
       "path": "../../express-webdebsimplified"
+    },
+    {
+      "path": "../../../react/movie-list/movie-list"
     }
   ],
   "settings": {}
