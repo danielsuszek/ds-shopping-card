@@ -2,7 +2,8 @@ import './navbar.scss'
 
 import { Link } from 'react-router-dom';
 
-const Navbar = () => {
+const Navbar = ({sideToggle, setSideToggle}) => {
+  
   return (
     <nav className="navbar">
       <div className="navbar__logo">
@@ -22,7 +23,7 @@ const Navbar = () => {
           </Link>
         </li>
       </ul>
-      <div className="hamburger__menu">
+      <div className="hamburger__menu" onClick={() => setSideToggle(true)}>
         <div></div>
         <div></div>
         <div></div>

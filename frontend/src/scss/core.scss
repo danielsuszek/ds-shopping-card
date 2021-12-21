@@ -3,7 +3,7 @@
 $Poppins: 'Poppins', sans-serif;
 
 // colors
-$black: #000;
+$black: rgba(0, 0, 0, 1);
 $dark: rgb(29, 29, 29);
 $light: #eee;
 $gray: rgb(199,199,199);
@@ -14,7 +14,8 @@ $topaz: rgb(255,200,124);
 $amber: rgb(255,126,0);
 $maroon: rgb(128,0,0);
 
-$main-bg: #000;
+$main-bg: rgba(0, 0, 0, 1);
+$backdrop-bg: rgba(0, 0, 0, 0.5);
 
 // spacing
 $spacing-md: 16px;
