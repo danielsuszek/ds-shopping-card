@@ -11,8 +11,23 @@
   z-index: 200;
   transform: translateX(-100%);
   transition: all 0.3s ease-out;
+  &__links {
+    border: 1px solid #f00;
+    display: flex;
+    height: 100vh;
+    flex-direction: column;
+    justify-content: center;
+    li a {
+        display: flex;
+        padding:40px 20px;
+        width: 100%;  
+        border: 1px solid #f0f;
+    }
+
+
+  }
 }
 .sidedrawer.show {
-  transform: translateX(0)
+  transform: translateX(0);
 }
 

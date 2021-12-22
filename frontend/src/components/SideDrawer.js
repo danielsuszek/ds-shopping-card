@@ -9,12 +9,12 @@ const SideDrawer = ({sideToggle, setSideToggle}) => {
   if (sideToggle) cssDrawerClasses.push('show')
   return (
     <div className={cssDrawerClasses.join(" ")}>
-      <ul onClick={() => setSideToggle(false)}>
+      <ul className="sidedrawer__links" onClick={() => setSideToggle(false)}>
         <li>
-          <Link to="/cart">Link 1</Link>
+          <Link to="/cart">Cart</Link>
         </li>
         <li>
-          <Link to="/">Link 2</Link>
+          <Link to="/">Home</Link>
         </li>
       </ul>      
     </div>

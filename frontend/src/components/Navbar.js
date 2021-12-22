@@ -24,9 +24,9 @@ const Navbar = ({sideToggle, setSideToggle}) => {
         </li>
       </ul>
       <div className="hamburger__menu" onClick={() => setSideToggle(true)}>
-        <div></div>
-        <div></div>
-        <div></div>
+        <div className="hamburger-bar"></div>
+        <div className="hamburger-bar"></div>
+        <div className="hamburger-bar"></div>
       </div>
     </nav>
   )

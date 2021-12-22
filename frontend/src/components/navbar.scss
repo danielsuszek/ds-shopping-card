@@ -38,7 +38,7 @@
     justify-content: space-between;
     flex-direction: column;
     cursor: pointer;
-    div {
+    div.hamburger-bar {
       height: 3px;
       background-color: $light;
     }
@@ -55,7 +55,6 @@
     }
     .hamburger__menu {
       display: flex;
-      
     }
   }
 }
