@@ -26,35 +26,8 @@
         cursor: pointer;
       }
       a.cart__link {
-        background-color: $primary;
-        color: $black;
-        // background-color: $black;
-        
-        padding: 12px;
-        border-radius: 5px;
-        display: flex;
-        align-items: center;
-        font-weight: 600;
-        span {
-          margin-left: 4px;
-        }
-        &:hover {
-          background-color: $amber;
-        }
-        span.cart__items {
-          width: 30px;
-          height: 30px;
-          font-size: 1rem;
-          margin-left: 8px;
-          display: flex;
-          justify-content: center;
-          align-items: center;
-          color: $amber;
-          background-color: #fff;
-          padding: 8px;
-          border-radius: 50%;
-        }
-      }
+        @include cart-link;
+      } // cart__link
     }
 
   } // navbar__links
