@@ -1,0 +1,14 @@
+@import '../scss/main-import.scss';
+
+.homepage {
+  border: 3px solid #aaa;
+  padding-left: 30px;
+  &__title {
+    padding: 20px;
+    padding-left: 30px;
+  }
+  &__products {
+    display: flex;
+    flex-wrap: wrap;
+  }
+}
