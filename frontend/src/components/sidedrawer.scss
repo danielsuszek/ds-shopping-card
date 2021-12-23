@@ -12,18 +12,27 @@
   transform: translateX(-100%);
   transition: all 0.3s ease-out;
   &__links {
-    border: 1px solid #f00;
+    border: 1px solid #aaa;
     display: flex;
     height: 100vh;
     flex-direction: column;
     justify-content: center;
     li a {
         display: flex;
-        padding:40px 20px;
+        padding: 40px 20px;
         width: 100%;  
-        border: 1px solid #f0f;
+        border: 1px solid #aaa;
+        color: $black;
+        font-weight: 600;
+        background-color: $primary;
+        &:hover {
+          background-color: $amber;
+        }
     }
-
+    a.cart__link {
+      @include cart-link;
+      padding: 40px 20px;
+    }
 
   }
 }
