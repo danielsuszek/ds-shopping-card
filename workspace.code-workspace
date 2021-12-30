@@ -11,6 +11,9 @@
     },
     {
       "path": "../../../react/redux/source-react-with-redux"
+    },
+    {
+      "path": "../../express-webdebsimplified/express"
     }
   ],
   "settings": {}
