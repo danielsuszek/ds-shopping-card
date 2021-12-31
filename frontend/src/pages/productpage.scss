@@ -1,0 +1,47 @@
+@import '../scss/main-import.scss';
+
+.productpage {
+  border: 1px solid #aaa;
+  margin-top: 50px;
+  display: flex;
+  &__info {
+    flex-basis: 70%;
+    display: flex;
+    .info__imgWrapper {
+      // display: flex;
+      flex-basis: 60%;
+      margin: 20px;
+      img {
+        max-width: 100%;
+        width: auto;
+        // border: 1px solid #aaa;
+      }
+    }
+    &__description {
+      // border: 1px solid #aaa;      
+      margin: 20px;
+      flex-basis: 40%;
+      display: flex;
+      flex-direction: column;
+      
+      justify-content: flex-start;
+      // align-items: flex-start;
+      .description__name,
+      .description__price,
+      .description__description
+      {
+        border-bottom: 2px solid $black;
+        width: 100%;
+        padding: 5% 4%;
+        background-color: $dark;
+      }
+      .description__price {
+      }
+      .description__description {
+      }
+    }
+  }
+  &__cart {
+    flex-basis: 30%; 
+  }
+}

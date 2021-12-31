@@ -1,3 +1,5 @@
+import './productpage.scss'
+
 import { useEffect } from 'react'
 import { useSelector, useDispatch} from 'react-redux'
 import { useParams } from 'react-router-dom'
@@ -19,14 +21,31 @@ const ProductPage = () => {
   
   return (
     <div>
-      Product Page 
       {loading ? (
         <h2>Loading...</h2>
       ) : error ? (
         <h2>{error}</h2>
       ) : (
-        <div>
-          {product.name}
+        <div className="productpage">
+          <div className="productpage__info">
+            <div className="info__imgWrapper">
+              <img src={product.imageUrl} alt={product.name} />
+            </div>
+            <div className="productpage__info__description">
+              <div className="description__name">
+                <h2>{product.name}</h2>
+              </div>
+              <div className="description__price">
+                <p>Cena: ${product.price}</p>
+              </div>
+              <div className="description__description">
+                <p> {product.description}</p>
+              </div>
+            </div>
+          </div>
+          <div className="productpage__cart">
+              cart
+          </div>
         </div>
       )}
     </div>
