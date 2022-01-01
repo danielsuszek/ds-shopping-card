@@ -1,6 +1,6 @@
 import './productpage.scss'
 
-import { useEffect } from 'react'
+import { useEffect, useState } from 'react'
 import { useSelector, useDispatch} from 'react-redux'
 import { useParams } from 'react-router-dom'
 
@@ -9,6 +9,8 @@ import { getProduct } from "../redux/actions/productActions"
 const ProductPage = () => {
   const { id } = useParams()
   const dispatch = useDispatch()
+
+  const [qty, setQty] = useState(1)
   
   const productDetails = useSelector((state) => state.getProduct);
   const { loading, error, product } = productDetails;
@@ -49,18 +51,18 @@ const ProductPage = () => {
             </div>
             <div className="cart__status">
               <span>Status</span>
-              <span className={`${(product.countInStock) > 0 ? 'status__green' : 'status__red'}`}>
-                {(product.countInStock) > 0 ? 'W magazynie' : 'Niedostępny'}
+              <span className={`${product.countInStock > 0 ? 'status__green' : 'status__red'}`}>
+                {product.countInStock > 0 ? 'W magazynie' : 'Niedostępny'}
               </span>
             </div>
             <div className="cart__quantity">
               <span>Ilość:</span>
-              <select>
-                <option>1</option>
-                <option>2</option>
-                <option>3</option>
-                <option>4</option>
-                <option>5</option>
+              <select value={qty} onChange={(e) => setQty(e.target.value)}>
+                {
+                  [...Array(product.countInStock).keys()].map((el) => (
+                    <option key={el + 1} value={el + 1}>{el + 1}</option>
+                  ))
+                }
               </select>
             </div>
             <div className="cart__addButton">
