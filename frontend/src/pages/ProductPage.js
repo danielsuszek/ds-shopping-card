@@ -44,7 +44,28 @@ const ProductPage = () => {
             </div>
           </div>
           <div className="productpage__cart">
-              cart
+            <div className="cart__price">
+              <span>Cena:</span><span>${product.price}</span>
+            </div>
+            <div className="cart__status">
+              <span>Status</span>
+              <span className={`${(product.countInStock) > 0 ? 'status__green' : 'status__red'}`}>
+                {(product.countInStock) > 0 ? 'W magazynie' : 'Niedostępny'}
+              </span>
+            </div>
+            <div className="cart__quantity">
+              <span>Ilość:</span>
+              <select>
+                <option>1</option>
+                <option>2</option>
+                <option>3</option>
+                <option>4</option>
+                <option>5</option>
+              </select>
+            </div>
+            <div className="cart__addButton">
+              Dodaj do koszyka
+            </div>
           </div>
         </div>
       )}
