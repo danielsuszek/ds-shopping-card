@@ -1,7 +1,9 @@
 @mixin border($color) {
   border: 1px solid $color
 }
-
+@mixin border-in-backgroundcolor{
+  border-bottom: 2px solid $main-bg;
+}
 @mixin cart-link {
   background-color: $primary;
   color: $black;
