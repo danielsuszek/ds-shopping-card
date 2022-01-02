@@ -2,12 +2,14 @@ import './productpage.scss'
 
 import { useEffect, useState } from 'react'
 import { useSelector, useDispatch} from 'react-redux'
-import { useParams } from 'react-router-dom'
+import { useParams,useNavigate } from 'react-router-dom'
 
 import { getProduct } from "../redux/actions/productActions"
+import { addToCart } from '../redux/actions/cartActions'
 
 const ProductPage = () => {
   const { id } = useParams()
+  const navigate = useNavigate()
   const dispatch = useDispatch()
 
   const [qty, setQty] = useState(1)
@@ -15,9 +17,14 @@ const ProductPage = () => {
   const productDetails = useSelector((state) => state.getProduct);
   const { loading, error, product } = productDetails;
 
+  const addToCartHandler = () => {
+    dispatch(addToCart(product._id, qty))
+    navigate('/cart')
+  }
+
   useEffect(() => {
     if (product && id !== product._id)
-      dispatch(getProduct(id));
+      dispatch(getProduct(id));      
   }, [dispatch, id, product]);
 
   
@@ -65,7 +72,9 @@ const ProductPage = () => {
                 }
               </select>
             </div>
-            <div className="cart__addButton">
+            <div className="cart__addButton"
+              onClick={addToCartHandler}
+            >
               Dodaj do koszyka
             </div>
           </div>

@@ -5,18 +5,6 @@
     },
     {
       "path": "../source-shopping-card"
-    },
-    {
-      "path": "../../../react/redux/react-with-redux"
-    },
-    {
-      "path": "../../../react/redux/source-react-with-redux"
-    },
-    {
-      "path": "../../express-webdebsimplified/express"
-    },
-    {
-      "path": "../../../html-css-portfolio"
     }
   ],
   "settings": {}
