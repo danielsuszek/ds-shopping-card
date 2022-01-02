@@ -10,9 +10,9 @@ import { addToCart } from '../redux/actions/cartActions'
 const ProductPage = () => {
   const { id } = useParams()
   const navigate = useNavigate()
-  const dispatch = useDispatch()
 
   const [qty, setQty] = useState(1)
+  const dispatch = useDispatch()
   
   const productDetails = useSelector((state) => state.getProduct);
   const { loading, error, product } = productDetails;
