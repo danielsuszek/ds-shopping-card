@@ -1,0 +1,53 @@
+@import '../scss/main-import.scss';
+
+.cartitem {
+  display: flex;
+  align-items: center;  
+  justify-content: space-between;
+  background-color: $dark;
+  // border: 1px solid #aaa;
+  margin: 8px;
+  padding: 1%;
+  &__left {
+    flex-basis: 60%;
+    display: flex; 
+    align-items: center;   
+    img.cartitem__left__img {
+      width: 100px;
+      height: 60px;
+      object-fit: contain;
+    }
+    &__name {
+      margin: 0 10%;
+      a {
+        color: $primary;
+      }
+    }
+  }
+  &__right {
+    display: flex;
+    &__price, &__qty, &__deleteBtn {
+      background-color: inherit;
+      padding: 0 15px;
+      font-size: 1.2rem;
+      
+    }
+    &__price {
+      color: $darkpastelgreen;
+    }
+    &__qty {
+      border: 1px solid $gray;
+      font-size: 16px;
+      color: $light;
+      cursor: pointer;
+    }
+    &__deleteBtn {
+      border: none;
+      cursor: pointer;
+      i {
+        border: none;
+        color: $maroon;
+      }
+    }
+  }
+}

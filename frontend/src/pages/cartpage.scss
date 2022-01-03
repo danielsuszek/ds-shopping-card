@@ -1,0 +1,20 @@
+@import '../scss/main-import.scss';
+
+.cartpage {
+  display: flex;
+  justify-content: center;
+  
+  &__items, &__subtotal {
+    margin: 50px 20px;
+    padding: 1%;
+  }
+  
+  &__items {
+    flex-basis: 70%;
+    border: 1px solid #aaa;
+  }
+  &__subtotal {
+    flex-basis: 20%;
+    border: 1px solid #aaa;
+  }
+}
