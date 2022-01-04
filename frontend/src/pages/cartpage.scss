@@ -12,6 +12,9 @@
   &__items {
     flex-basis: 70%;
     border: 1px solid #aaa;
+    h2 {
+      margin-bottom: 50px;
+    }
   }
   &__subtotal {
     flex-basis: 20%;

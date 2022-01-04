@@ -1,7 +1,7 @@
 import "./cartitem.scss"
 import { Link } from "react-router-dom";
 
-const CartItem = ({key, item, qtyChangeHandler}) => {
+const CartItem = ({item, qtyChangeHandler, removeHandler}) => {
   return (
     <div className="cartitem">
       <div className="cartitem__left">
@@ -21,7 +21,10 @@ const CartItem = ({key, item, qtyChangeHandler}) => {
             <option key={i + 1} value={i + 1}>{i + 1}</option>
           ))}
         </select>
-        <button className="cartitem__right__deleteBtn">
+        <button 
+          className="cartitem__right__deleteBtn"
+          onClick={() => removeHandler(item.id)}
+        >
           <i className="fas fa-trash"></i>
         </button>
       </div>

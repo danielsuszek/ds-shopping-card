@@ -5,7 +5,7 @@ import { Link } from "react-router-dom";
 
 import CartItem from "../components/CartItem"
 
-import { addToCart } from "../redux/actions/cartActions";
+import { addToCart, removeFromCart } from "../redux/actions/cartActions";
 
 const CartPage = () => {
   const dispatch = useDispatch();
@@ -17,6 +17,10 @@ const CartPage = () => {
   
   const qtyChangeHandler = (id, qty) => {
     dispatch(addToCart(id, qty))
+  }
+  
+  const removeFromCartHandler = (id) => {
+    dispatch(removeFromCart(id));    
   }
   
   return (
@@ -31,6 +35,7 @@ const CartPage = () => {
               key={item.id}
               item={item}
               qtyChangeHandler={qtyChangeHandler}
+              removeHandler={removeFromCartHandler}
             />
           ))
         )}
