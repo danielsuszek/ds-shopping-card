@@ -1,8 +1,15 @@
 import './navbar.scss'
 
 import { Link } from 'react-router-dom';
+import { useSelector } from "react-redux";
 
 const Navbar = ({sideToggle, setSideToggle}) => {
+  const cart = useSelector((state) => state.cart);
+  const { cartItems } = cart;
+
+  const getCartCount = () => {
+    return cartItems.reduce((qty, item) => Number(item.qty) + qty, 0);
+  };
   
   return (
     <nav className="navbar">
@@ -14,7 +21,7 @@ const Navbar = ({sideToggle, setSideToggle}) => {
           <Link to="/cart" className="cart__link">
             <i className="fas fa-shopping-cart"></i>
             <span>Cart</span>
-            <span className="cart__items">0</span>
+            <span className="cart__items">{getCartCount()}</span>
           </Link>
         </li>
         <li>
