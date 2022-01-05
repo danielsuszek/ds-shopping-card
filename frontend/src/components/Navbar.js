@@ -14,19 +14,19 @@ const Navbar = ({sideToggle, setSideToggle}) => {
   return (
     <nav className="navbar">
       <div className="navbar__logo">
-        <h2><Link to="/">Shop</Link></h2>
+        <h2><Link to="/">Sklep</Link></h2>
       </div>
       <ul className="navbar__links">
         <li>
           <Link to="/cart" className="cart__link">
             <i className="fas fa-shopping-cart"></i>
-            <span>Cart</span>
+            <span>Koszyk</span>
             <span className="cart__items">{getCartCount()}</span>
           </Link>
         </li>
         <li>
           <Link to="/">
-            Shop
+            Sklep
           </Link>
         </li>
       </ul>

@@ -4,7 +4,6 @@ import { Link } from 'react-router-dom'
 
 const SideDrawer = ({sideToggle, setSideToggle}) => {
   const cssDrawerClasses = ['sidedrawer']
-  console.log('sideToggle', sideToggle)
 
   if (sideToggle) cssDrawerClasses.push('show')
   return (
@@ -13,7 +12,7 @@ const SideDrawer = ({sideToggle, setSideToggle}) => {
       <li>
           <Link to="/cart" className="cart__link">
             <i className="fas fa-shopping-cart"></i>
-            <span>Cart</span>
+            <span>Koszyk</span>
             <span className="cart__items">0</span>
           </Link>
         </li>

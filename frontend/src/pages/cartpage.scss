@@ -18,6 +18,32 @@
   }
   &__subtotal {
     flex-basis: 20%;
-    border: 1px solid #aaa;
+    height: 200px;
+    background-color: $dark;
+    .subtotal { 
+      &__cartCount {
+
+      }
+      &__payment {
+        font-size: 1.3rem;        
+        span {
+          color: $darkpastelgreen;
+          padding-left: 20px;
+        }
+      }
+      &__btnPay {
+        margin-top: 50px;
+        width: 100%;
+        font-size: 1.3rem;        
+        padding: 10px;
+        border: none;
+        border-radius: 5px;
+        background-color: $primary;
+        cursor: pointer;
+        &:hover {
+          background-color: $amber;
+        }
+      }
+    }
   }
 }
