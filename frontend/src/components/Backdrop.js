@@ -5,9 +5,7 @@ const Backdrop = ({sideToggle, setSideToggle}) => {
 
   return (
     sideToggle && 
-    <div className='backdrop' onClick={() => setSideToggle(false)}>
-      Backdrop
-    </div>
+    <div className='backdrop' onClick={() => setSideToggle(false)}></div>
   )
 }
 

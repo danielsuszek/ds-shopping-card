@@ -18,7 +18,7 @@ const SideDrawer = ({sideToggle, setSideToggle}) => {
         </li>
         <li>
           <Link to="/">
-            Shop
+            Sklep
           </Link>
         </li>
       </ul>      

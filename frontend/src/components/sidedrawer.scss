@@ -3,7 +3,7 @@
 .sidedrawer {
   width: 70%;
   height: 100vh;
-  background-color: $gray;
+  background-color: $gray-transparent;
   color: $black;
   position: fixed;
   top: 0;
@@ -12,7 +12,7 @@
   transform: translateX(-100%);
   transition: all 0.3s ease-out;
   &__links {
-    border: 1px solid #aaa;
+    // border: 1px solid #faa;
     display: flex;
     height: 100vh;
     flex-direction: column;
