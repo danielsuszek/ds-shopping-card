@@ -12,7 +12,6 @@
   transform: translateX(-100%);
   transition: all 0.3s ease-out;
   &__links {
-    // border: 1px solid #faa;
     display: flex;
     height: 100vh;
     flex-direction: column;
@@ -20,8 +19,9 @@
     li a {
         display: flex;
         padding: 40px 20px;
-        width: 100%;  
-        border: 1px solid #aaa;
+        width: 100%; 
+        border-radius: 5px;
+        margin-top: 2px;
         color: $black;
         font-weight: 600;
         background-color: $primary;
@@ -30,7 +30,7 @@
         }
     }
     a.cart__link {
-      @include cart-link;
+      @include cart-link;      
       padding: 40px 20px;
     }
 

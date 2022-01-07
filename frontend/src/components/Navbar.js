@@ -30,7 +30,10 @@ const Navbar = ({sideToggle, setSideToggle}) => {
           </Link>
         </li>
       </ul>
-      <div className="hamburger__menu" onClick={() => setSideToggle(true)}>
+      <div 
+        className="hamburger__menu" 
+        onClick={() => setSideToggle(true)}
+      >
         <div className="hamburger-bar"></div>
         <div className="hamburger-bar"></div>
         <div className="hamburger-bar"></div>
